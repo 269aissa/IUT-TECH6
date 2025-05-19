@@ -1,0 +1,78 @@
+/* Vous pouvez maintenant réduire considérablement votre CSS personnalisé */
+/* car Bootstrap gère déjà la plupart des styles de base */
+
+/* Styles spécifiques non couverts par Bootstrap */
+.emoji-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* Animation pour chaque emoji */
+}
+
+.emoji-container span {
+    display: inline-block;
+    font-size: 2.5rem;
+    animation: float-emoji 2.5s infinite ease-in-out alternate;
+}
+
+.emoji-container span:nth-child(2) {
+    animation-delay: 0.5s;
+    animation-duration: 2.8s;
+}
+
+.emoji-container span:nth-child(3) {
+    animation-delay: 1s;
+    animation-duration: 2.2s;
+}
+
+.emoji-container span:nth-child(4) {
+    animation-delay: 0.3s;
+    animation-duration: 2.7s;
+}
+
+@keyframes float-emoji {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    20% {
+        transform: translate(-10px, -15px) rotate(-10deg) scale(1.1);
+    }
+    40% {
+        transform: translate(15px, -10px) rotate(8deg) scale(0.95);
+    }
+    60% {
+        transform: translate(-12px, 12px) rotate(-6deg) scale(1.05);
+    }
+    80% {
+        transform: translate(10px, 10px) rotate(12deg) scale(1);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+}
+
+
+.departure-page {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Animation des émojis */
+@keyframes float {
+    /* [...] (gardez vos animations) */
+}
+
+/* Personnalisation supplémentaire si nécessaire */
+.card-hover-effect:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.bg-custom-primary {
+    background-color: #2c3e50;
+}
